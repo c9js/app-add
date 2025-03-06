@@ -1,0 +1,13 @@
+/*────────────────────────────────────────────────────────────────────────────────────────────────*/
+
+Object.defineProperties(global,{__:{set:v=>process.exit(_=v)},_:{set:console.log}});
+Object.defineProperty(global, '$', {value:{}});
+
+/*────────────────────────────────────────────────────────────────────────────────────────────────*/
+
+class A {
+    constructor() {
+        _=process.argv
+    }
+}
+new A
