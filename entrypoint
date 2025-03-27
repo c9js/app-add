@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+/*┌──────┐
+  │ Ядро │
+  └──────┘*/
+require('./lib/core/core');
+
+/*┌─────┐
+  │ MVC │
+  └─────┘*/
+// Точки входа
+// require('./lib/entrypoints/entrypoint');
+require('./lib/entrypoints/entrypointInstall');
+
+/*┌──────────────┐
+  │ Список путей │
+  └──────────────┘*/
+const PATH_FILES = './files'; // Каталог со списком файлов
+
+/*┌───────────────┐
+  │ Список файлов │
+  └───────────────┘*/
+const FILES = [
+    ['gitignore', '.gitignore']
+];
+
+/*┌─────────────┐
+  │ Точка входа │
+  └─────────────┘*/
+entrypoint = (...args) => {
+    _='entrypoint'
+    _=args
+    if (args[0] == 'i') {
+        $.entrypoint.Install(...args.slice(1))
+    }
+};
